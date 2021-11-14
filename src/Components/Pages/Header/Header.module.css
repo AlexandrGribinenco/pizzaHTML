@@ -1,0 +1,11 @@
+.header {
+    background-color: black;
+    color: white;
+    height: 60px;
+    display: flex;
+}
+.Navbar{
+    display: flex;
+    margin-left: auto;
+    padding-right: 20px;
+}
