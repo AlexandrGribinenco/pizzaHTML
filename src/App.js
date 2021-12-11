@@ -2,29 +2,18 @@ import './App.css';
 import Header from "./Components/Pages/Header/Header";
 import Footer from "./Components/Pages/Footer/Footer";
 import {Route, Routes} from "react-router-dom";
-import Home from "./Components/Pages/Home/Home";
-import About from "./Components/Pages/About/About";
-import Service from "./Components/Pages/Service/Service";
-import Gallery from "./Components/Pages/Gallary/Gallery";
-import Contact from "./Components/Pages/Contact/Contact";
 import React from "react";
-import Navbar from "./Components/Pages/Navbar/Navbar";
+import MainPage from "./Components/Pages/MainPage/MainPage";
+import RestaurantPage from "./Components/Pages/RestaurantPage/RestaurantPage";
+
 
 function App() {
     return (
         <div className="App">
-            <div className="header">
-                <Header/>
-                <Navbar/>
-            </div>
+            <Header/>
             <Routes>
-                <Route path="/home"
-                       element={<Home />}/>
-                <Route exact path="/about"
-                       element={<About />}/>
-                <Route path="/service" element={<Service />}/>
-                <Route path="/gallery" element={<Gallery />}/>
-                <Route path="/contact" element={<Contact />}/>
+            <Route exact path="/" element={<MainPage/>}/>
+            <Route path="/restaurant/:products" element={<RestaurantPage/>}/>
             </Routes>
             <Footer/>
         </div>
