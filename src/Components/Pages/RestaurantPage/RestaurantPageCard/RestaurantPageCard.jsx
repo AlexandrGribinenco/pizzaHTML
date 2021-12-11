@@ -3,10 +3,10 @@ import "./ResteurantPageCard.css";
 import Modal from "../Modal/Modal";
 
 const RestaurantPageCard = (props) => {
-    // const [modalActive,setModalActive] = useState(true);
+     const [modalActive,setModalActive] = useState(true);
     return(
         // <Modal active={modalActive} setActive={setModalActive}>
-            <div id={props.id} className="card" >
+            <div id={props.id} className="card" onClick={() => setModalActive(true)}>
                 <img src={props.image} alt="" className="card-image"/>
                 <div className="card-text">
                     <div className="card-heading">
